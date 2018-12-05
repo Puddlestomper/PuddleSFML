@@ -4,7 +4,9 @@ bin/
 bin-int/
 examples/
 doc/
-premake/
+vendor/premake/
+
+!PuddleSFML/vendor/**
 
 # Files
 *.user
