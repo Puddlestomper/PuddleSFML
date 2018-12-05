@@ -68,29 +68,29 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-x86_64\PuddleSFML\</OutDir>
-    <IntDir>..\bin-int\Debug-x86_64\PuddleSFML\</IntDir>
+    <OutDir>..\bin\Debug-x64\PuddleSFML\</OutDir>
+    <IntDir>..\bin-int\Debug-x64\PuddleSFML\</IntDir>
     <TargetName>PuddleSFML</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-x86\PuddleSFML\</OutDir>
-    <IntDir>..\bin-int\Debug-x86\PuddleSFML\</IntDir>
+    <OutDir>..\bin\Debug-Win32\PuddleSFML\</OutDir>
+    <IntDir>..\bin-int\Debug-Win32\PuddleSFML\</IntDir>
     <TargetName>PuddleSFML</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-x86_64\PuddleSFML\</OutDir>
-    <IntDir>..\bin-int\Release-x86_64\PuddleSFML\</IntDir>
+    <OutDir>..\bin\Release-x64\PuddleSFML\</OutDir>
+    <IntDir>..\bin-int\Release-x64\PuddleSFML\</IntDir>
     <TargetName>PuddleSFML</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-x86\PuddleSFML\</OutDir>
-    <IntDir>..\bin-int\Release-x86\PuddleSFML\</IntDir>
+    <OutDir>..\bin\Release-Win32\PuddleSFML\</OutDir>
+    <IntDir>..\bin-int\Release-Win32\PuddleSFML\</IntDir>
     <TargetName>PuddleSFML</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
@@ -99,6 +99,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PUDL_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vendor\SFML\x64\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -107,17 +108,17 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Debug-x86_64\PuddleSFML\PuddleSFML.lib</ImportLibrary>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\SFML\x64\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Debug-x64\PuddleSFML\PuddleSFML.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-x86_64\PuddleSFML\PuddleSFML.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-x86_64\PuddleSFML\PuddleSFML.dll ..\bin\Debug-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-x86_64\PuddleSFML\PuddleSFML.dll ..\bin\Debug-x86_64\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PUDL_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vendor\SFML\Win32\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -126,17 +127,17 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Debug-x86\PuddleSFML\PuddleSFML.lib</ImportLibrary>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\SFML\Win32\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Debug-Win32\PuddleSFML\PuddleSFML.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-x86\PuddleSFML\PuddleSFML.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-x86\PuddleSFML\PuddleSFML.dll ..\bin\Debug-x86\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-x86\PuddleSFML\PuddleSFML.dll ..\bin\Debug-x86\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PUDL_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vendor\SFML\x64\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -151,17 +152,17 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\bin\Release-x86_64\PuddleSFML\PuddleSFML.lib</ImportLibrary>
+      <AdditionalDependencies>sfml-system.lib;sfml-window.lib;sfml-graphics.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\SFML\x64\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Release-x64\PuddleSFML\PuddleSFML.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-x86_64\PuddleSFML\PuddleSFML.dll\ (xcopy /Q /E /Y /I ..\bin\Release-x86_64\PuddleSFML\PuddleSFML.dll ..\bin\Release-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-x86_64\PuddleSFML\PuddleSFML.dll ..\bin\Release-x86_64\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PUDL_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vendor\SFML\Win32\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -176,11 +177,10 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\bin\Release-x86\PuddleSFML\PuddleSFML.lib</ImportLibrary>
+      <AdditionalDependencies>sfml-system.lib;sfml-window.lib;sfml-graphics.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\SFML\Win32\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Release-Win32\PuddleSFML\PuddleSFML.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-x86\PuddleSFML\PuddleSFML.dll\ (xcopy /Q /E /Y /I ..\bin\Release-x86\PuddleSFML\PuddleSFML.dll ..\bin\Release-x86\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-x86\PuddleSFML\PuddleSFML.dll ..\bin\Release-x86\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\PuddleSFML.h" />
