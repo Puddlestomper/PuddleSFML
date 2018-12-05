@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PuddleSFML">
+      <UniqueIdentifier>{95489114-8100-D361-EA07-ACBDD6DE6D52}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\PuddleSFML.h" />
+    <ClInclude Include="src\PuddleSFML\Core.h">
+      <Filter>PuddleSFML</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PuddleSFML\Frame.h">
+      <Filter>PuddleSFML</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\PuddleSFML\Frame.cpp">
+      <Filter>PuddleSFML</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
