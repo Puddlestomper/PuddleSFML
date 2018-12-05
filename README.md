@@ -1,2 +1,2 @@
 # PuddleSFML
-Custom extension of SFML
+GUI Library built on SFML.
