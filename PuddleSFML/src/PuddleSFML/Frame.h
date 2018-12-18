@@ -1,9 +1,6 @@
 #pragma once
 
 #include <string>
-#include <unordered_map>
-#include <functional>
-#include <thread>
 
 #include "SFML/Graphics.hpp"
 
@@ -11,22 +8,15 @@
 
 namespace pudl
 {
-	class PUDL_API Frame
+	class PUDL_API Frame : public sf::RenderWindow
 	{
 	public:
-		Frame() = default;
-		Frame(int width, int height, const std::string& name);
-		~Frame();
+		Frame(int width, int height)
+			: width(width), height(height) {}
 
-		void create(int width, int height, const std::string& name = "DEFAULT_FRAME_NAME");
-		void stop();
-
-		void setEventHandler(sf::Event::EventType et, const std::function<void(void)>& handler);
+		void PrintFrame() const;
+		void qCreate(const std::string& name);
 	private:
-		void run(int width, int height, const std::string& name);
-
-		sf::RenderWindow m_window;
-		std::unordered_map<sf::Event::EventType, std::function<void()>> m_eventHandles;
-		std::thread m_eventThread;
+		int width, height;
 	};
 }
