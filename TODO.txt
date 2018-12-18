@@ -2,4 +2,21 @@
 Frame
 ###################
 
--Add mutex for eventhandler map
+-Integrate Menu
+
+###################
+Menu
+###################
+
+-Figure out general menu design
+-Change to use Shaders
+-Implement load from file:
+	+ follow "test.pudlmenu" as example
+	+ "-" prefixes calling an event
+	+ "[]" has shape between, support {square, rectangle, circle, polygon, oval}
+	+ "()" creates tuples of parameters
+	+ "{}" creates subsections
+	+ consists of tags followed by ":", {colour/color, layer, button, switch, radio, check, bullet, other gui components}
+	+ special sections: "ALL"
+
+###################

@@ -13,10 +13,13 @@
     <ClInclude Include="src\PuddleSFML\Frame.h">
       <Filter>PuddleSFML</Filter>
     </ClInclude>
+    <ClInclude Include="src\PuddleSFML\Menu.h" />
+    <ClInclude Include="src\PuddleSFML\Drawable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PuddleSFML\Frame.cpp">
       <Filter>PuddleSFML</Filter>
     </ClCompile>
+    <ClCompile Include="src\PuddleSFML\Menu.cpp" />
   </ItemGroup>
 </Project>

@@ -185,10 +185,13 @@
   <ItemGroup>
     <ClInclude Include="src\PuddleSFML.h" />
     <ClInclude Include="src\PuddleSFML\Core.h" />
+    <ClInclude Include="src\PuddleSFML\Drawable.h" />
     <ClInclude Include="src\PuddleSFML\Frame.h" />
+    <ClInclude Include="src\PuddleSFML\Menu.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PuddleSFML\Frame.cpp" />
+    <ClCompile Include="src\PuddleSFML\Menu.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
