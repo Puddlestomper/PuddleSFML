@@ -10,3 +10,5 @@ vendor/premake/
 
 # Files
 *.user
+*.vcxproj
+*.vcxproj.filters
