@@ -12,3 +12,4 @@ vendor/premake/
 *.user
 *.vcxproj
 *.vcxproj.filters
+*.sln
